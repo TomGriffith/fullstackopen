@@ -1,0 +1,13 @@
+
+
+title:Entering A note in the SPA app
+
+note over browser:
+User enters data into the text field and clicks submit button
+end note
+note over browser:
+user entered data is added to the array and the list is redrawn
+then the new note is posted back to the server
+end note
+browser -> server: HTTP POST https://fusstack-exampleapp.herokuapp.com/new_note_spa
+

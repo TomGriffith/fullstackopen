@@ -1,0 +1,28 @@
+
+
+title Visiting SPA
+
+note over browser
+user enters https://fullstack-exampleapp.herokuapp.com/spa into url
+end note
+
+browser -> server: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa
+server --> browser: HTML
+browser -> server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+server --> browser: main.css
+browser -> server: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa.js
+server-->browser: spa.js
+
+note over browser 
+once ready state changes, JavaScript runs
+and creates an XHTTP request for the notes
+end note
+
+browser -> server: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+server --> browser: JSON data for notes
+
+
+note over browser 
+li elements are created based on 
+JSON response data and added to the page
+end note
